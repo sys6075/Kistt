@@ -1,0 +1,79 @@
+h1{
+    margin: 2em 0 1.5em 0;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(90deg, #051937, #004d7a, #008793, #00bf72, #a8eb12)
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: '맑은고딕';
+}
+
+#main-menu{
+    margin: 0px 0px 0px 17%;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+#main-menu>li{
+    float: left;
+    background: black;
+}
+
+#main-menu>li>a{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14pt;
+    letter-spacing: 0.05em;
+    display: block; /*안쪽여백*/
+    padding: 20px 140px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+
+#main-menu>li:nth-child(1)>a{
+    border-left: 1px solid rgba(0,0,0,0.15);
+}
+
+#sub-menu{
+    position: absolute;
+    background: gray;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 110px; /*submenu 네모 세로 가로*/
+    list-style-type: none;
+    font-size: 15pt;
+}
+
+#sub-menu>li{
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    text-decoration: none;
+    text-align: center
+
+}
+#sub-menu>li>a{
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    display: block;
+    padding: 10px 16px; /*block 간 여백*/
+}
+
+#main-menu>li:hover #sub-menu{ /*부모 UL요소에 마우스 오버할 때 자손 UL요소가 나타난다*/
+    opacity: 1;
+    visibility: visible;
+}
